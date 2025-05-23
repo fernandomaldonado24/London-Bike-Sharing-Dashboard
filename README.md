@@ -5,5 +5,4 @@ Bike usage in London peaks in summer and drops in winter, with more rides on non
 ![Dashboard gif](https://github.com/user-attachments/assets/8d3eb702-d22d-447f-b954-8c0d1f2394de)
 
 
-![Uploading Untitled design.gif…]()
 
