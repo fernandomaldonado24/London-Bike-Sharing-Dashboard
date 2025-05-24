@@ -1,4 +1,4 @@
-# London Bike Sharing Dashboard
+# London Bike Sharing Dashboard: 👉 [View Report](https://app.powerbi.com/view?r=eyJrIjoiOTExYzdmZjktZThlYS00OTU5LTgwZjEtZTJlYjUyOWMzMDQ4IiwidCI6ImY2OTI5MWY5LTNkYTctNDJiMy05ZjEwLWYyZWFlMjU3ZDVhYiIsImMiOjR9)
 
 At the start of the project, the relevant variables were analyzed, and once identified, the model schema was planned. The key dimensions identified were: Season, Date, Holiday, and Weather, along with a transaction table. A star schema was chosen, with the aim of avoiding additional columns in the transaction table to keep the model optimized.
 
