@@ -8,6 +8,11 @@ At the start of the project, the relevant variables were analyzed, and once iden
   <img src="https://github.com/user-attachments/assets/49132faa-af97-4f4c-a5f3-bcdd9b76c116" alt="Dashboard Preview">
 </p>
 
+
+
+
+
+
 <p align="center">
   <a href="https://app.powerbi.com/view?r=eyJrIjoiOTExYzdmZjktZThlYS00OTU5LTgwZjEtZTJlYjUyOWMzMDQ4IiwidCI6ImY2OTI5MWY5LTNkYTctNDJiMy05ZjEwLWYyZWFlMjU3ZDVhYiIsImMiOjR9">
     View Report
