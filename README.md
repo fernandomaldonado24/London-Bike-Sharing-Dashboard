@@ -1,58 +1,83 @@
-# London-Bike-Sharing-Dashboard
-At the start of the project, the relevant variables were analyzed, and once identified, the model schema was planned. The key dimensions identified were: Season, Date, Holiday, and Weather, along with a transaction table. A star schema was chosen, with the aim of avoiding additional columns in the transaction table to keep the model optimized.
-<p align="center">
-<img width="562" alt="Model Scheme" src="https://github.com/user-attachments/assets/45a4afb0-b6f7-4153-95f7-8f1bc00a69e6" />
-</p>
+🚲 London Bike Sharing Dashboard
+This project explores bike sharing patterns in London using a data model built in Power BI. It includes analysis of seasonal, temporal, and weather-related factors that influence ride frequency.
 
-To begin, a custom function was created in Power Query using M code to generate the date table. This function included various temporal breakdowns—such as weeks, start of the week, months, start of the month, and other time-based segments—to enable flexible time slicing in the analysis.
+📊 Data Modeling
+At the start of the project, relevant variables were identified and the data model schema was designed. The main dimensions included:
 
-<p align="center">
-<img width="960" alt="Date function" src="https://github.com/user-attachments/assets/20c747bb-76da-490f-87f1-3ff3f4e15652" />
-</p>
+Season
 
-Then, the D_DATE table was created, with its source calling the custom function to generate all the columns. The function takes two inputs: the start date and the number of projected years.
+Date
 
-<p align="center">
-<img width="954" alt="DATE Table" src="https://github.com/user-attachments/assets/94faf7cf-c9a0-4f44-b5f2-b1853742d59f" />
-</p>
+Holiday
 
-The other dimensions were created by manually specifying the values, as they involved only a limited set of entries.
+Weather
 
-<p align="center">
-<img width="952" alt="Other Tables" src="https://github.com/user-attachments/assets/a6eb9ee7-411b-4dc2-8855-3ae4a1284444" />
-</p>
+These were supported by a fact table: F_BIKE_SHARING.
 
-Finally, the transactions table, F_BIKE_SHARING, required minimal preparation, as illustrated in the following figure.
+A star schema was chosen to optimize performance and simplify analysis, avoiding unnecessary columns in the fact table.
 
-<p align="center">
-<img width="942" alt="Transactions Table" src="https://github.com/user-attachments/assets/4022e1df-6c65-4eb0-bc5b-766121fc3df8" />
-</p>
+<p align="center"> <img width="562" alt="Model Scheme" src="https://github.com/user-attachments/assets/45a4afb0-b6f7-4153-95f7-8f1bc00a69e6" /> </p>
+📆 Date Table Generation
+A custom Power Query function using M code was developed to create a flexible and reusable date table. This function includes various time segments—weeks, start of week, months, start of month, etc.—to support flexible time slicing.
 
-Once the model was ready, the design and storytelling phase began. This was planned using Figma. 
+<p align="center"> <img width="960" alt="Date function" src="https://github.com/user-attachments/assets/20c747bb-76da-490f-87f1-3ff3f4e15652" /> </p>
+The D_DATE table calls this function with two inputs:
 
-<p align="center">
-<img width="960" alt="Canvas" src="https://github.com/user-attachments/assets/4dbe26bd-70dc-4783-8232-da3b2b67e2de" />
-</p>
+Start Date
 
-Simple metrics were created for the report. The following figure shows the metrics used, including the calculation of the Average Rides on Non-Holidays metric, which was displayed in a KPI card.
+Number of Projection Years
 
-<p align="center">
-<img width="934" alt="Metrics" src="https://github.com/user-attachments/assets/dfe88c80-f24b-46e2-b5d2-00817959e756" />
-</p>
+<p align="center"> <img width="954" alt="DATE Table" src="https://github.com/user-attachments/assets/94faf7cf-c9a0-4f44-b5f2-b1853742d59f" /> </p>
+📁 Other Dimensions and Fact Table
+Other dimensions were created manually, as they consisted of limited predefined values.
 
-The first page of the report shows a general overview of bike sharing activity in London during 2015 and 2016. It includes key metrics such as the average number of rides on holidays (770) and non-holidays (1,152), along with a monthly trend line that highlights seasonal variations—peaking in the summer and decreasing during the winter months.
-A bar chart summarizes total rides by season, showing that summer had the highest usage, followed by fall, spring, and winter. Additionally, a line chart displays bike usage by hour and season, revealing typical commuting patterns with peaks around 8 AM and 5 PM, particularly during warmer seasons.
-These findings suggest that bike sharing in London is primarily used for daily commuting, especially on weekdays and during favorable weather, with significantly lower activity during holidays and winter months.
+<p align="center"> <img width="952" alt="Other Tables" src="https://github.com/user-attachments/assets/a6eb9ee7-411b-4dc2-8855-3ae4a1284444" /> </p>
+The transactions table F_BIKE_SHARING required minimal preparation and was integrated directly into the model.
 
-<p align="center">
-<img width="673" alt="London Bike Sharing Dashboard Page 1" src="https://github.com/user-attachments/assets/4b29597e-3b68-472a-9ca5-9c8aa8ff958a" />
-</p>
+<p align="center"> <img width="942" alt="Transactions Table" src="https://github.com/user-attachments/assets/4022e1df-6c65-4eb0-bc5b-766121fc3df8" /> </p>
+🎨 Report Design
+The design and storytelling phase was planned using Figma. The layout was structured in two pages:
 
-The second page of the report explores how weather and time affect bike usage in London. The scatter plot in the center shows a positive correlation between temperature and average bike shares—usage increases notably between 20°C and 30°C. Dot size reflects humidity, which appears to have a secondary effect. This suggests that warmer, less humid conditions encourage more riding.
-To the right, a bar chart highlights that bike usage is highest under “scattered clouds,” “broken clouds,” and “clear” weather, while conditions like rain, thunderstorms, and snow reduce activity significantly.
-At the bottom, a heatmap reveals time-based patterns. On weekdays, there are clear commuting peaks at 8 AM and 5–6 PM, especially midweek. On weekends, usage starts later and is spread more evenly throughout the day, reflecting more recreational use.
-Overall, the data indicates that bike sharing in London is strongly influenced by both temperature and time of day, with usage rising in mild weather and aligning closely with workweek routines.
+Page 1: Overview by month, season, and time of day
 
-<p align="center">
-<img width="673" alt="London Bike Sharing Dashboard Page 2" src="https://github.com/user-attachments/assets/7d78b651-259c-4a29-b99c-8f79f82de7ac" />
-</p>
+Page 2: Detailed patterns influenced by weather and temperature
+
+<p align="center"> <img width="960" alt="Canvas" src="https://github.com/user-attachments/assets/4dbe26bd-70dc-4783-8232-da3b2b67e2de" /> </p>
+🧮 Metrics
+Simple metrics were created to support the analysis. The example below includes the calculation of Average Rides on Non-Holidays, which was displayed on a KPI card.
+
+<p align="center"> <img width="934" alt="Metrics" src="https://github.com/user-attachments/assets/dfe88c80-f24b-46e2-b5d2-00817959e756" /> </p>
+📄 Report Page 1 – General Overview
+The first page of the report provides a high-level summary of bike sharing activity in London for 2015 and 2016. Key metrics include:
+
+Average rides on holidays: 770
+
+Average rides on non-holidays: 1,152
+
+A line chart displays monthly trends, peaking during summer and dipping in winter.
+
+A seasonal breakdown shows summer as the most active season, followed by fall, spring, and winter. Hourly patterns by season show strong commuting peaks at 8 AM and 5 PM, especially in warmer months.
+
+These findings suggest bike sharing is mostly used for commuting during weekdays and in favorable weather.
+
+<p align="center"> <img width="673" alt="London Bike Sharing Dashboard Page 1" src="https://github.com/user-attachments/assets/4b29597e-3b68-472a-9ca5-9c8aa8ff958a" /> </p>
+📄 Report Page 2 – Time & Weather Analysis
+This page analyzes how temperature and weather influence bike usage.
+
+The scatter plot shows a strong positive correlation between temperature and bike rides, with usage increasing notably between 20°C and 30°C. Dot size represents humidity, which has a smaller effect.
+
+The bar chart reveals that the most bike shares occur under:
+
+Scattered clouds
+
+Broken clouds
+
+Clear skies
+
+Rides decrease under rain, thunderstorms, and snow.
+
+The heatmap shows weekday peaks at 8 AM and 5–6 PM, typical of commuting behavior. On weekends, usage is more evenly distributed, indicating leisure-oriented use.
+
+Overall, the data shows bike sharing in London is influenced by both weather and daily routines, peaking under mild conditions and during weekday commute hours.
+
+<p align="center"> <img width="673" alt="London Bike Sharing Dashboard Page 2" src="https://github.com/user-attachments/assets/7d78b651-259c-4a29-b99c-8f79f82de7ac" /> </p>
