@@ -30,10 +30,10 @@ Finally, the transactions table, F_BIKE_SHARING, required minimal preparation, a
 <img width="942" alt="Transactions Table" src="https://github.com/user-attachments/assets/4022e1df-6c65-4eb0-bc5b-766121fc3df8" />
 </p>
 
-Once the model was ready, the design and storytelling phase began. This was planned using Figma. 
+Once the model was ready, the design phase began with layout planning in Figma. The canvas was structured using a clean grid to organize visual elements clearly. Space was divided into top and bottom sections, allowing for a natural flow from summary metrics to detailed visuals. Equal-sized panels ensured balance, while reserved areas for filters and charts supported future interactivity. This spatial planning aimed to keep the report intuitive and visually coherent from the start.
 
 <p align="center">
-<img width="960" alt="Canvas" src="https://github.com/user-attachments/assets/4dbe26bd-70dc-4783-8232-da3b2b67e2de" />
+<img width="956" alt="London Bike Sharing Dashboard Cavas" src="https://github.com/user-attachments/assets/9d5d3f2e-a3b9-48de-b2d6-c44a82b99be8" />
 </p>
 
 Simple metrics were created for the report. The following figure shows the metrics used, including the calculation of the Average Rides on Non-Holidays metric, which was displayed in a KPI card.
