@@ -58,3 +58,5 @@ Overall, the data indicates that bike sharing in London is strongly influenced b
 <p align="center">
 <img width="673" alt="London Bike Sharing Dashboard Page 2" src="https://github.com/user-attachments/assets/7d78b651-259c-4a29-b99c-8f79f82de7ac" />
 </p>
+
+In summary, this report presents a full analysis of London bike sharing data, starting from data modeling to dashboard planning. A star schema was created with well-structured dimension tables and a dynamic date function to support flexible time analysis. The dashboard layout was carefully planned in Figma, focusing on clear space organization to guide future visual storytelling. The project combines data preparation, model optimization, and design planning to explore how time, season, and weather influence bike usage in a meaningful and accessible way.
